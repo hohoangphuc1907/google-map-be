@@ -16,7 +16,6 @@ export class GoogleMapController {
 
     @Post()
     async createRoom(@Body() room: RoomDTO) {
-        console.log(room);
         const data = await  this.googleMapService.createRoom(room);
         return {data:data, statusCode: 200};
     }
